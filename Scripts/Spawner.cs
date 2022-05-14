@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -15,13 +14,15 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
+        var waitForSecond = new WaitForSeconds(_secondsBetwinSpawn);
+
         while (true)
         {
             int randomSpawn = Random.Range(0, _spawnPoints.Length);
 
             Instantiate(_groundPrefab, _spawnPoints[randomSpawn].position, Quaternion.identity);
 
-            yield return new WaitForSeconds(_secondsBetwinSpawn);
+            yield return waitForSecond;
         }
     }
 }

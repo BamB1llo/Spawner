@@ -13,5 +13,4 @@ public class GroundMover : MonoBehaviour
     {
         transform.Translate(Vector2.right * _speedMovemend * Time.deltaTime);
     }
-    
 }
