@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        var waitForSecond = new WaitForSeconds(_secondsBetwinSpawn);
+        WaitForSeconds waitForSecond = new WaitForSeconds(_secondsBetwinSpawn);
 
         while (true)
         {
